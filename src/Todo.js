@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import List from './components/List';
 import TodoForm from './components/TodoForm';
 import Item from './components/Item';
+import Modal from './components/Modal';
 import './Todo.css'
 
 const SAVED_ITEMS = "savedItems"
@@ -10,15 +11,15 @@ function Todo() {
 
     const [items, setItems] = useState([]);
 
-    useEffect(()=> {
+    useEffect(() => {
         let savedItems = JSON.parse(localStorage.getItem(SAVED_ITEMS));
-        if(savedItems) {
+        if (savedItems) {
             setItems(savedItems);
         }
 
     }, [])
 
-    useEffect(()=> {
+    useEffect(() => {
         localStorage.setItem(SAVED_ITEMS, JSON.stringify(items));
     }, [items])
 
@@ -46,11 +47,16 @@ function Todo() {
 
     return (
         <div className="container">
-            <h1>Todo</h1>
+            <header>
+                <h1>Todo</h1>
+                <button className="addButton">+</button>
+            </header>
 
-            <TodoForm onAddItem={addItem}></TodoForm>
+            {/* <TodoForm onAddItem={addItem}></TodoForm> */}
 
             <List onDone={onDone} onItemDeleted={onItemDeleted} items={items}></List>
+
+            <Modal></Modal>
         </div>
     )
 }
