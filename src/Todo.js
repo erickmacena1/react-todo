@@ -59,7 +59,7 @@ function Todo() {
     return (
         <div className="container">
             <header>
-                <h1>My first React Todo</h1>
+                <h1>My First React Todo</h1>
                 <button onClick={() => { setShowModal(true); }} className="addButton">+</button>
             </header>
 
