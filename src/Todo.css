@@ -43,6 +43,14 @@ ul {
     box-shadow: 0 2px 7px 1px rgba(0, 0, 0, 0.2);
 }
 
+.liBtn {
+    background-color: inherit;
+    border: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .modal {
     width: 100vw;
     height: 100vh;
@@ -50,4 +58,16 @@ ul {
     position: fixed;
     top: 0;
     left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
+}
+
+.cardModal {
+    padding: 20px;
+    background-color: white;
 }

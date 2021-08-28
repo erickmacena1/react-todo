@@ -3,11 +3,11 @@ import Card from "./Card"
 
 function DoneImg(props) {
     if (props.done) {
-        return (<img src="./assets/done.png" alt="Checked Icon" width="16px" />);
+        return (<img src="./assets/done.png" alt="Checked Icon" width="20px" />);
     }
 
     else {
-        return (<img src="./assets/undone.png" alt="Unchecked Icon" width="16px" />);
+        return (<img src="./assets/undone.png" alt="Unchecked Icon" width="20px" />);
     }
 }
 
@@ -19,9 +19,9 @@ function ListItem(props) {
                 {props.item.text}
 
                 <div>
-                    <button onClick={() => props.onDone(props.item)}><DoneImg done={props.item.done}></DoneImg></button>
+                    <button className="liBtn" onClick={() => props.onDone(props.item)}><DoneImg done={props.item.done}></DoneImg></button>
 
-                    <button onClick={() => props.onItemDeleted(props.item)}><img src="./assets/close-btn.png" alt="Delete Button" width="16px" /></button>
+                    <button className="liBtn" onClick={() => props.onItemDeleted(props.item)}><img src="./assets/close-btn.png" alt="Delete Button" width="20px" /></button>
                 </div>
             </Card>
         </li>)
