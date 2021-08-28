@@ -1,12 +1,33 @@
+:root {
+    --lighter-blue: hsl(197, 71%, 90%);
+    --light-blue: hsl(197, 71%, 73%);
+    --normal-blue: hsl(197, 71%, 50%);
+    --dark-blue: hsl(197, 71%, 25%);
+    --darker-blue: hsl(197, 71%, 10%);
+    color: var(--darker-blue);
+    background-color: var(--lighter-blue);
+}
+
 .container {
+    box-sizing: border-box;
     margin: auto;
-    max-width: 450px;
+    max-width: 590px;
+    padding: 0 3em;
+    background-color: var(--light-blue);
+    min-height: 100vh;
+    border-radius: 3%;
+    box-shadow: 0 2px 7px 1px rgba(0, 0, 0, 0.2);
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: var(--dark-blue);
+}
+
+button {
+    cursor: pointer;
 }
 
 .addButton {
@@ -14,8 +35,8 @@ header {
     height: 50px;
     font-size: 20px;
     border: none;
-    background-color: skyblue;
-    color: white;
+    background-color: var(--normal-blue);
+    color: var(--lighter-blue);
     border-radius: 25px;
 }
 
@@ -30,6 +51,7 @@ ul {
 }
 
 .item {
+    box-sizing: border-box;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -37,6 +59,7 @@ ul {
     font-size: 30px;
     padding: 1rem .5rem;
     margin-top: 15px;
+    background-color: var(--lighter-blue);
 }
 
 .card {
@@ -54,7 +77,7 @@ ul {
 .modal {
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.3);
     position: fixed;
     top: 0;
     left: 0;
@@ -68,6 +91,20 @@ ul {
 }
 
 .cardModal {
-    padding: 20px;
-    background-color: white;
+    padding: 2em;
+    background-color: var(--lighter-blue);
+}
+
+.modalInput {
+    font: inherit;
+    color: inherit;
+}
+
+.modalBtn {
+    background-color: var(--normal-blue);
+    color: var(--lighter-blue);
+    font-size: 16px;
+    padding: .5em;
+    border: none;
+    border-radius: 10%;
 }

@@ -6,6 +6,7 @@ import Modal from './components/Modal';
 import './Todo.css'
 
 const SAVED_ITEMS = "savedItems"
+const LAST_ID = "lastId"
 
 function Todo() {
 
@@ -25,15 +26,19 @@ function Todo() {
     }, [items])
 
     function addItem(text) {
-        let item = new Item(text);
+        let id = JSON.parse(localStorage.getItem(LAST_ID));
+        if(!id) id = 0;
+        id++;
+        let item = new Item(text, id);
         setItems([...items, item]);
         onHideModal();
+        localStorage.setItem(LAST_ID, JSON.stringify(id));
     }
 
     function onItemDeleted(item) {
-        let filteredItems = items.filter(it => it.id !== item.id)
+        let filteredItems = items.filter(it => it.id !== item.id);
 
-        setItems(filteredItems)
+        setItems(filteredItems);
     }
 
     function onDone(item) {
@@ -54,8 +59,8 @@ function Todo() {
     return (
         <div className="container">
             <header>
-                <h1>Todo</h1>
-                <button onClick={()=>{setShowModal(true);}} className="addButton">+</button>
+                <h1>My first React Todo</h1>
+                <button onClick={() => { setShowModal(true); }} className="addButton">+</button>
             </header>
 
             <List onDone={onDone} onItemDeleted={onItemDeleted} items={items}></List>

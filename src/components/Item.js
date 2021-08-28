@@ -1,8 +1,7 @@
 class Item {
-    static lastId = 0;
 
-    constructor(text) {
-        this.id = Item.lastId++;
+    constructor(text, id) {
+        this.id = id;
         this.text = text;
         this.done = false;
     }
