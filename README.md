@@ -2,7 +2,7 @@
 
 ![Meu todo list](./github-assets/todo.gif)
 
-## [🙂 Testar o App 🙂](ericktodo.netlify.app)
+## [🙂 Testar o App 🙂](https://ericktodo.netlify.app)
 
 ### Tecnologias Utilizadas
 
