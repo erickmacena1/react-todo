@@ -1,17 +1,11 @@
 import React from "react"
-import SocialItem  from "./SocialItem";
+import ListItem from "./ListItem";
+import SocialItem from "./SocialItem";
 
 function Social(props) {
     return (
-        <ul>
-            {props.socialItems.map((socialI, index) => {
-                let separator = "";
-                if(index % 2 !== 0) {
-                    separator = "|";
-                }
-
-                return separator + <SocialItem item={socialI}></SocialItem>
-            })}
+        <ul className="socialList">
+            {props.socialItems.map((socialI, index) => <SocialItem item={socialI} key={index}></SocialItem>)}
         </ul>
     )
 }

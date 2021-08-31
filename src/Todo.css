@@ -10,9 +10,10 @@
 
 .container {
     box-sizing: border-box;
+    position: relative;
     margin: auto;
     max-width: 590px;
-    padding: 0 3em;
+    padding: 0 3em 140px 3em;
     background-color: var(--light-blue);
     min-height: 100vh;
     border-radius: 3%;
@@ -113,5 +114,34 @@ footer {
     padding: 2em 0;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+footer > h3 a {
+    text-decoration: none;
+    color: var(--dark-blue);
+}
+
+.socialList {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    font-size: 26px;
+}
+
+.socialList li {
+    margin: 0 .4em;
+}
+
+.socialList a {
+    width: 100%;
+    color: var(--dark-blue)
 }

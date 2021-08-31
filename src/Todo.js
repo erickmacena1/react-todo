@@ -11,12 +11,14 @@ const LAST_ID = "lastId"
 const mySocials = [
     {
         name: "Linkedin",
-        url: "https://linkedin.com/in/erickmacena/"
+        url: "https://linkedin.com/in/erickmacena/",
+        rel: "noreferrer"
     },
     {
         name: "Github",
-        url: "https://github.com/erickmacena1/"
-    }
+        url: "https://github.com/erickmacena1/",
+        rel: "noreferrer"
+    },
 ]
 
 function Todo() {
@@ -81,7 +83,8 @@ function Todo() {
             </Modal>
 
             <footer>
-                <h3>Created with ❤️ by <a target="_blank" rel="author" href="https://github.com/erickmacena1/">Erick Macena</a></h3>
+                <h3>Created with ❤️ by <a target="_blank" rel="noreferrer" href="https://github.com/erickmacena1/">Erick Macena</a></h3>
+
                 <Social socialItems={mySocials}></Social>
             </footer>
         </div>

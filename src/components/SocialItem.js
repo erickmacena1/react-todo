@@ -2,7 +2,7 @@ import React from "react"
 
 function SocialItem(props) {
     return (
-        <li></li>
+        <li><a href={props.item.url} target="_blank" rel={props.item.rel}>{props.item.name}</a></li>
     )
 }
 
