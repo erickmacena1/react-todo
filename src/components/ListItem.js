@@ -5,7 +5,6 @@ function DoneImg(props) {
     if (props.done) {
         return (<img src="./assets/done.png" alt="Checked Icon" width="20px" />);
     }
-
     else {
         return (<img src="./assets/undone.png" alt="Unchecked Icon" width="20px" />);
     }
