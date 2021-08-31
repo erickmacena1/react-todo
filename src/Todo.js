@@ -68,6 +68,10 @@ function Todo() {
             <Modal show={showModal} onHideModal={onHideModal}>
                 <TodoForm onAddItem={addItem}></TodoForm>
             </Modal>
+
+            <footer>
+                <h3>Created with ❤️ by <a target="_blank" rel="author" href="https://github.com/erickmacena1/">Erick Macena</a></h3>
+            </footer>
         </div>
     )
 }
