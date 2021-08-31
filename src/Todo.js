@@ -3,10 +3,21 @@ import List from './components/List';
 import TodoForm from './components/TodoForm';
 import Item from './components/Item';
 import Modal from './components/Modal';
+import Social from './components/Social';
 import './Todo.css'
 
 const SAVED_ITEMS = "savedItems"
 const LAST_ID = "lastId"
+const mySocials = [
+    {
+        name: "Linkedin",
+        url: "https://linkedin.com/in/erickmacena/"
+    },
+    {
+        name: "Github",
+        url: "https://github.com/erickmacena1/"
+    }
+]
 
 function Todo() {
 
@@ -27,7 +38,7 @@ function Todo() {
 
     function addItem(text) {
         let id = JSON.parse(localStorage.getItem(LAST_ID));
-        if(!id) id = 0;
+        if (!id) id = 0;
         id++;
         let item = new Item(text, id);
         setItems([...items, item]);
@@ -71,6 +82,7 @@ function Todo() {
 
             <footer>
                 <h3>Created with ❤️ by <a target="_blank" rel="author" href="https://github.com/erickmacena1/">Erick Macena</a></h3>
+                <Social socialItems={mySocials}></Social>
             </footer>
         </div>
     )
