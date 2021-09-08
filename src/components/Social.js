@@ -1,5 +1,4 @@
 import React from "react"
-import ListItem from "./ListItem";
 import SocialItem from "./SocialItem";
 
 function Social(props) {
